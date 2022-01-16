@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Weather Logger</string>
+    <string name="temp">Temperature</string>
+    <string name="date">Date</string>
+    <string name="city_hint">Enter city name here</string>
+    <string name="fetch">Fetch</string>
+    <string name="degree_cel">%1$s&#176; C</string>
+    <string name="welcome_to">Welcom to</string>
+    <string name="no_data_found">No weather data to show</string>
+    <string name="feels_like">Feels like</string>
+    <string name="min_temp">Min temp</string>
+    <string name="max_temp">Max temp</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+
+    <string name="error_empty_city">Please add city name</string>
+
+    <string name="error_server_connectoin_failed">Please add city name</string>
+    <string name="error_not_found_city">No city with such name</string>
+</resources>

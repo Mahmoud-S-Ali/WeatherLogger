@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="tempDetailsViewModel"
+            type="com.example.feature_weatherinformation.presentation.tempdetails.TempDetailsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/green"
+            tools:text="Cairo"
+            android:textSize="@dimen/_28ssp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:cardBackgroundColor="@color/grey_100"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/tv_temp_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:text="@string/temp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_20ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_temp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:textColor="@color/grey_700"
+                        android:textSize="@dimen/_16ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_temp_title"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_temp_title"
+                        tools:text="720 kcal" />
+
+
+                    <TextView
+                        android:id="@+id/tv_feels_like_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:text="@string/feels_like"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_temp_title" />
+
+                    <TextView
+                        android:id="@+id/tv_feels_like_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:textColor="@color/grey_700"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_feels_like_title"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_feels_like_title"
+                        tools:text="40" />
+
+
+                    <TextView
+                        android:id="@+id/tv_temp_min_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:text="@string/min_temp"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_feels_like_title" />
+
+                    <TextView
+                        android:id="@+id/tv_min_temp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:textColor="@color/grey_700"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_temp_min_title"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_temp_min_title"
+                        tools:text="40" />
+
+
+                    <TextView
+                        android:id="@+id/tv_max_temp_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:text="@string/max_temp"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_temp_min_title" />
+
+                    <TextView
+                        android:id="@+id/tv_max_temp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:textColor="@color/grey_700"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_max_temp_title"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_max_temp_title"
+                        tools:text="40" />
+
+
+                    <TextView
+                        android:id="@+id/tv_pressure_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:text="@string/pressure"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_max_temp_title" />
+
+                    <TextView
+                        android:id="@+id/tv_pressure_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:textColor="@color/grey_700"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_pressure_title"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_pressure_title"
+                        tools:text="40" />
+
+
+                    <TextView
+                        android:id="@+id/tv_humidity_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:text="@string/humidity"
+                        android:textColor="@color/grey_800"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pressure_title" />
+
+                    <TextView
+                        android:id="@+id/tv_humidity_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:textColor="@color/grey_700"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_humidity_title"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_humidity_title"
+                        tools:text="40" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
